@@ -54,13 +54,13 @@ app.layout = html.Div([
         html.Br(),
 
         html.Label("Probability of Failure if Poor Input (User Error)"),
-        dcc.Slider(id='slider-ab-pred', min=0, max=1, step=0.01, value=initial_P_ab_pred, marks={0: '0', 0.5: '0.5', 1: '1'}),
+        dcc.Slider(id='slider-ab-pred', min=0, max=1, step=0.01, value=initial_P_ab_pred, marks={0: '0', 0.5: '0.5', 1: '1'},tooltip={"placement": "bottom", "always_visible": True}),
         html.Label("Prevalence of Condition in Population"),
-        dcc.Slider(id='slider-prev-ab', min=0, max=1, step=0.01, value=initial_P_prev_ab, marks={0: '0', 0.5: '0.5', 1: '1'}),
+        dcc.Slider(id='slider-prev-ab', min=0, max=1, step=0.01, value=initial_P_prev_ab, marks={0: '0', 0.5: '0.5', 1: '1'},tooltip={"placement": "bottom", "always_visible": True}),
         html.Label("Probability of Failure if Sufficient Input"),
-        dcc.Slider(id='slider-fn', min=0, max=1, step=0.01, value=initial_P_fn, marks={0: '0', 0.5: '0.5', 1: '1'}),
+        dcc.Slider(id='slider-fn', min=0, max=1, step=0.01, value=initial_P_fn, marks={0: '0', 0.5: '0.5', 1: '1'},tooltip={"placement": "bottom", "always_visible": True}),
         html.Label("Probability of Failure with Manual Method"),
-        dcc.Slider(id='slider-man', min=0, max=1, step=0.01, value=initial_P_man, marks={0: '0', 0.5: '0.5', 1: '1'}),
+        dcc.Slider(id='slider-man', min=0, max=1, step=0.01, value=initial_P_man, marks={0: '0', 0.5: '0.5', 1: '1'},tooltip={"placement": "bottom", "always_visible": True}),
 
         html.Br(),
         html.Button("Reset to Default", id='reset-button', n_clicks=0)
@@ -96,7 +96,7 @@ def update_graph(preset, ab_pred, prev_ab, fn, man, reset_clicks):
     curve = compute_probabilities(ab_pred, prev_ab, fn, man)
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=P_uf_values, y=curve, mode='lines', name='Failure Rate Margin (Manual Method Failure - SS Failure)'))
-    fig.update_layout(title=f"Preset: {preset}", xaxis_title="Probability of User Failure", yaxis_title="Failure Rate Margin (Manual Method Failure - SS Failure)")
+    fig.update_layout(title=f"Preset: {preset}<br>{ab_pred},{prev_ab},{fn},{man}", xaxis_title="Probability of User Failure", yaxis_title="Failure Rate Margin (Manual Method Failure - SS Failure)")
     return fig, ab_pred, prev_ab, fn, man
 
 # =============================

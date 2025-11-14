@@ -1,10 +1,12 @@
 {
     "Twins, False Negative": {"P_fn": 0.10, "P_ab_pred": 0.5, "P_prev_ab": 0.02, "P_man": 0.4},
     "Twins, False Positive": {"P_fn": 0.10, "P_ab_pred": 0.5, "P_prev_ab": 0.98, "P_man": 0.4},
-    "Lie, False Negative": {"P_fn": 0.05, "P_ab_pred": 0.5, "P_prev_ab": 0.04, "P_man": 0.4},
-    "Lie, False Positive": {"P_fn": 0.10, "P_ab_pred": 0.5, "P_prev_ab": 0.96, "P_man": 0.4},
-    "GA, False Negative": {"P_fn": 0.02, "P_ab_pred": 0.5, "P_prev_ab": 0.40, "P_man": 0.4},
-    "GA, False Positive": {"P_fn": 0.20, "P_ab_pred": 0.5, "P_prev_ab": 0.60, "P_man": 0.4},
+    "Lie, False Negative": {"P_fn": 0.042, "P_ab_pred": 0.5, "P_prev_ab": 0.04, "P_man": 0.3},
+    "Lie, False Positive": {"P_fn": 0.01, "P_ab_pred": 0.5, "P_prev_ab": 0.96, "P_man": 0.4},
+    "GA, Second Trimester": {"P_fn": 0.05, "P_ab_pred": 0.928, "P_prev_ab": 1, "P_man": 0.2},
+    "GA, Third Trimester": {"P_fn": 0.05, "P_ab_pred": 0.928, "P_prev_ab": 1, "P_man": 0.2},
     "DVP_oligo, False Negative": {"P_fn": 0.15, "P_ab_pred": 0.5, "P_prev_ab": 0.05, "P_man": 0.4},
-    "DVP_oligo, False Positive": {"P_fn": 0.15, "P_ab_pred": 0.5, "P_prev_ab": 0.95, "P_man": 0.4}
+    "DVP_oligo, False Positive": {"P_fn": 0.15, "P_ab_pred": 0.5, "P_prev_ab": 0.95, "P_man": 0.4},
+	"DVP_poly, False Negative": {"P_fn": 0.15, "P_ab_pred": 0.5, "P_prev_ab": 0.05, "P_man": 0.4},
+    "DVP_poly, False Positive": {"P_fn": 0.15, "P_ab_pred": 0.5, "P_prev_ab": 0.95, "P_man": 0.4}
 }
